@@ -68,19 +68,59 @@ const getProperty = (formName, fieldName, property) => document[formName][fieldN
 const arimeticOperation = (formName, tagName, firstValue, secondValue, operator) => {
     document[formName][tagName].value = eval(`${firstValue} ${operator} ${secondValue}`)
 }
-const calculate = (e, obj) => console.log(eval(`${obj.val1} ${e.target.textContent} ${obj.val2}`))
 
-
-// document.querySelector('form div').addEventListener('click', calculate)
-const property = "value"
 let form = "formExample"
 let tagNameResult = "resultValue"
 let operator = "+"
+const property = "value"
+
+
+
+
+
+const calculate = (e, obj = { val1: 10, val2: 20 }) => {
+    let jsonForm = {
+        firstVal: getProperty(form, "firstValue", property),
+        secondVal: getProperty(form, "secondValue", property)
+    }
+    console.log(eval(`${obj.val1} ${e.target.textContent} ${obj.val2}`))
+    console.log('firstValue :', jsonForm);
+}
+
+
+
+
 let jsonForm = {
     firstVal: getProperty(form, "firstValue", property),
     secondVal: getProperty(form, "secondValue", property)
 }
+let variableDePrueba = getProperty(form, "firstValue", property);
+
+let firstVal = () => { getProperty(form, "firstValue", property) }
+const test = () => {
+    console.log('jsonForm', jsonForm);
+    console.log('variableDePrueba', variableDePrueba);
+    console.log('firstVal', firstVal());
+}
+test();
+
+
+// document.querySelector('form div').addEventListener('click', () => {})
+
 
 // let response = arimeticOperation(form, tagNameResult, jsonForm.firstVal, jsonForm.secondVal, operator);
 
 // console.log(response);
+
+// TIPOS DE DATOS EN JAVASCRIPT
+let variable1 = "" //string
+let variable2 = 1 // number
+let variable3 = true // boolean
+let variable4 = undefined //undefined
+let variable5 = null // null
+let variable6 = {} // object
+let variable6 = [] // object
+let variable7 = () => {} // function  // esta es un arrow function
+let variable8 = Symbol() // symbol
+
+let variable; //undefined
