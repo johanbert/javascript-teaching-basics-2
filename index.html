@@ -11,17 +11,29 @@
 <body>
     <h2> Formulario 1</h2>
     <form name="formExample">
-        CAMPOVALOR 1:
-        <input type="text" name="campovalor" value="10">
+        Primer valor:
+        <input type="text" name="firstValue">
+        <br> Segundo valor:
+        <input type="text" name="secondValue">
 
-        <input type="text" name="resultado1">
+        <div id="buttons">
+            <button type="button" name="operator" onclick="calculate(event)">+</button>
+            <button type="button" name="operator" onclick="calculate(event)">-</button>
+            <button type="button" name="operator" onclick="calculate(event)">*</button>
+            <button type="button" name="operator" onclick="calculate(event)">/</button>
+        </div>
+
+        <br><br> Resultado:
+        <input type="text" name="resultValue" disabled>
+
+
     </form>
-    <h2> Formulario 2</h2>
+    <!-- <h2> Formulario 2</h2>
     <form name="formExample2">
         CAMPOVALOR 2:
         <input type="text" name="campovalor" id="campovalor" value="100">
         <input type="text" id="resultado2">
-    </form>
+    </form> -->
 
 
     <script src="js/main.js"></script>
