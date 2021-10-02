@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="color: white; background-color: rgb(54, 54, 54);">
+    <h2> Formulario 1</h2>
+    <form name="formExample" autocomplete="off">
+        Primer valor:<br>
+        <input type="text" name="firstValue">
+        <br> Segundo valor:<br>
+        <input type="text" name="secondValue">
+        <br><br>
+        <div id="buttons">
+            <button type="button" name="operator" onclick="calculate(event,{fieldVal1:'firstValue',fieldVal2:'secondValue'})">+</button>
+            <button type="button" name="operator" onclick="calculate(event,{fieldVal1:'firstValue',fieldVal2:'secondValue'})">-</button>
+            <button type="button" name="operator" onclick="calculate(event,{fieldVal1:'firstValue',fieldVal2:'secondValue'})">*</button>
+            <button type="button" name="operator" onclick="calculate(event,{fieldVal1:'firstValue',fieldVal2:'secondValue'})">/</button>
+        </div>
+
+        <br><br> Resultado:
+        <input type="text" name="resultValue" disabled>
+
+
+    </form>
+    <!-- <h2> Formulario 2</h2>
+    <form name="formExample2">
+        CAMPOVALOR 2:
+        <input type="text" name="campovalor" id="campovalor" value="100">
+        <input type="text" id="resultado2">
+    </form> -->
+
+
+    <script src="js/main.js"></script>
+    <script src="js/calculadora1.js"></script>
+</body>
+
+</html>
